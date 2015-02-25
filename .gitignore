@@ -1,8 +1,12 @@
 *.class
-
+pom.xml
 # Mobile Tools for Java (J2ME)
 .mtj.tmp/
-
+*/target/
+*.iml
+.idea
+*.scss.cache
+*production/overlays/
 # Package Files #
 *.jar
 *.war

@@ -11,6 +11,14 @@
         </webroots>
       </configuration>
     </facet>
+    <facet type="gwt" name="GWT">
+      <configuration>
+        <setting name="additionalCompilerParameters" value="-Xss1024k" />
+        <setting name="compilerMaxHeapSize" value="512" />
+        <setting name="gwtScriptOutputStyle" value="OBF" />
+        <setting name="webFacet" value="Web" />
+      </configuration>
+    </facet>
   </component>
   <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_7" inherit-compiler-output="false">
     <output url="file://$MODULE_DIR$/target/classes" />
