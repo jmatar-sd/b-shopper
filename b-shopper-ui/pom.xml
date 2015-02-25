@@ -77,9 +77,10 @@
                 <version>${jetty.plugin.version}</version>
 				<configuration>
 				    <scanIntervalSeconds>2</scanIntervalSeconds>
+                    <stopPort/><stopKey/>
 				</configuration>
             </plugin>
-            <!-- TODO remove? -->
+            <!-- TODO remove?
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-failsafe-plugin</artifactId>
@@ -104,7 +105,7 @@
                         </goals>
                     </execution>
                 </executions>
-            </plugin>
+            </plugin>-->
         </plugins>
     </build>
 

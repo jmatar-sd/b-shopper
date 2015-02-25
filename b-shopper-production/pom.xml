@@ -110,7 +110,7 @@
                         <groupId>com.vaadin</groupId>
                         <artifactId>vaadin-maven-plugin</artifactId>
                         <configuration>
-                            <module>com.jmatar.MyAppWidgetset</module>
+                            <module>core.MyAppWidgetset</module>
                             <extraJvmArgs>-Xmx512M -Xss1024k</extraJvmArgs>
                             <warSourceDirectory>${vaadin.resource.directory}</warSourceDirectory>
                             <webappDirectory>${vaadin.resource.directory}/VAADIN/widgetsets</webappDirectory>
@@ -178,17 +178,18 @@
                         <artifactId>jetty-maven-plugin</artifactId>
                         <version>${jetty.plugin.version}</version>
                         <configuration>
-                            <baseResource>${vaadin.resource.directory}</baseResource>
-                        </configuration>
-                    </plugin>
-                </plugins>
-            </build>
-        </profile>
-    </profiles>
+                    <!--<baseResource>${vaadin.resource.directory}</baseResource>-->
+                    <stopKey/><stopPort/>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</profile>
+</profiles>
 
-    <build>
-        <plugins>
-            <!-- Do not produce and install artifacts when not using the production profile -->
+<build>
+<plugins>
+    <!-- Do not produce and install artifacts when not using the production profile -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-war-plugin</artifactId>

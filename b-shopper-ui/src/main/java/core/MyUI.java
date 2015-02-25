@@ -1,4 +1,4 @@
-package com.jmatar;
+package core;
 
 import javax.servlet.annotation.WebServlet;
 
@@ -17,23 +17,11 @@ import com.vaadin.ui.VerticalLayout;
  *
  */
 @Theme("mytheme")
-@Widgetset("com.jmatar.MyAppWidgetset")
+@Widgetset("core.MyAppWidgetset")
 public class MyUI extends UI {
 
     @Override
     protected void init(VaadinRequest vaadinRequest) {
-        final VerticalLayout layout = new VerticalLayout();
-        layout.setMargin(true);
-        setContent(layout);
-
-        Button button = new Button("Button One");
-        button.addClickListener(new Button.ClickListener() {
-            @Override
-            public void buttonClick(ClickEvent event) {
-                layout.addComponent(new Label("Thank you for clicking"));
-            }
-        });
-        layout.addComponent(button);
 
     }
 
