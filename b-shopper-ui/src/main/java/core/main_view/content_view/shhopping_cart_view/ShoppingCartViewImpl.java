@@ -1,6 +1,9 @@
 package core.main_view.content_view.shhopping_cart_view;
 
+import com.vaadin.server.FontAwesome;
+import com.vaadin.shared.ui.label.ContentMode;
 import com.vaadin.ui.Button;
+import com.vaadin.ui.Label;
 import com.vaadin.ui.VerticalLayout;
 
 /**
@@ -16,6 +19,15 @@ private static final String
 {initRoot();initComponents();}
 private void initRoot(){setWidth(VIEW_WIDTH);setHeight(VIEW_HEIGHT);setStyleName(VIEW_STYLE_NAME);}
 private void initComponents(){
-	addComponent(new Button("maof"));
+	initLogo();
 }
+
+private void initLogo(){
+	logo= new Label("<center>"+FontAwesome.SHOPPING_CART.getHtml()+"</center>", ContentMode.HTML);
+	setWidth(VIEW_WIDTH);
+	setHeight("80px");
+	setStyleName("logo");
+	addComponent(logo);
+}
+private Label logo;
 }

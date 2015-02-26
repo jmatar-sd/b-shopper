@@ -1,3 +1,7 @@
+$shopping-cart-view-bgcolor:  rgba(70%, 48%, 43%, .89);
+$view-border:  8px darken($shopping-cart-view-bgcolor, .4) inset ;
+$view-opacity: .75;
+
 @mixin general-config(){
   html, body{width: 100%; height: 100%;}
 }
@@ -11,7 +15,8 @@
   .header-view{
     background: url('res/images/bg.jpg') no-repeat rgba(189, 22, 22, .22) 0 0 fixed;
     background-size: 100% 100%;
-    opacity:    .75;
+    border-bottom: $view-border;
+    opacity:    $view-opacity;
 
   }
 }
@@ -27,9 +32,14 @@
 }
 @mixin shopping-cart-view(){
   .shopping-cart-view{
-
-    background: url('res/images/bg.jpg') repeat-x rgba(189, 22, 22, .22) 80% 0;
-
-    opacity:    .75;
+//    background: url('res/images/bg.jpg') repeat-x rgba(189, 22, 22, .22) 80% 0;
+//    background-color: darken($shopping-cart-view-bgcolor, .4);
+    border-left: $view-border;
+    opacity:    $view-opacity;
+  }
+  .logo{
+    font-size: 4em;
+    text-align: center;
+    color: rgb(247, 136, 169);
   }
 }
