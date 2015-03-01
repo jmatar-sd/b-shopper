@@ -1,0 +1,16 @@
+@import "views/main-view";
+
+@mixin theme-products-manager-view(){
+
+}
+@mixin theme-main-view(){
+  @include general-config;
+  @include main-view;
+  @include content-view;
+  @include header-view;
+  @include menu-view;
+  @include products-view;
+  @include shopping-cart-view;
+  @include summary-view;
+  @include item-view;
+}

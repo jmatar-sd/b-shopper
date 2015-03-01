@@ -1,0 +1,23 @@
+
+@mixin border-radius($value){-moz-border-radius: $value;-webkit-border-radius: $value;border-radius: $value;}
+@mixin glass-shadow($color){
+  -webkit-box-shadow:1px 1px 1px 1px darken($color, 22%), 0 1px 89px lighten($color, 22%) inset;
+  -moz-box-shadow:1px 1px 1px 1px darken($color, 22%), 0 1px 89px lighten($color, 22%) inset;
+  box-shadow:1px 1px 1px 1px darken($color, 22%), 0 1px 89px lighten($color, 22%) inset;
+}
+@mixin glass-color($color){
+  background-color:	lighten($color, .22);
+}
+@mixin	border-radius-custom($top-left, $bottom-right, $top-right, $bottom-left){
+//  -moz-border-radius-topleft:		 $top-left;
+//  -moz-border-radius-topright:	 $top-right;
+//  -moz-border-radius-bottomleft:	 $bottom-left;
+//  -moz-border-radius-bottomright:	 $bottom-right;
+  -webkit-border-radius: 			 $top-left $bottom-right $top-right $bottom-left;
+  -moz-border-radius: 			 $top-left $bottom-right $top-right $bottom-left;
+  border-radius: 				     $top-left $bottom-right $top-right $bottom-left;
+}
+@mixin trans($property, $dur, $method){
+  -webkit-transition: #{$property} $dur #{$method};
+  transition: #{$property} $dur #{$method};
+}

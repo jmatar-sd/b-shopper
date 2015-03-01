@@ -28,15 +28,12 @@
 // Example variants can be copy/pasted from https://vaadin.com/wiki/-/wiki/Main/Valo+Examples
 
 @import "../valo/valo.scss";
-@import "main-view";
+@import "entry-point";
+$v-included-components: remove($v-included-components, button);
 @mixin mytheme {
   @include valo;
 
   // Insert your own theme rules here
-  @include general-config;
-  @include main-view;
-  @include content-view;
-  @include header-view;
-  @include products-view;
-  @include shopping-cart-view;
+  @include theme-main-view;
+  @include theme-products-manager-view;
 }

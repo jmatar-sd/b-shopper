@@ -18,7 +18,7 @@ private static final String
 private void initRoot()
 {setWidth(VIEW_WIDTH);setHeight(VIEW_HEIGHT);setStyleName(VIEW_STYLE_NAME);}
 private void initComponents(){
-	initProductsView();initShoppingCartView();setSplitPosition(80f);
+	initProductsView();initShoppingCartView();setSplitPosition(70f);
 }
 private void initProductsView(){
 	productsView= new ProductsViewImpl();
@@ -28,6 +28,14 @@ private void initShoppingCartView(){
 	shoppingCartView= new ShoppingCartViewImpl();
 	setSecondComponent(shoppingCartView);
 
+}
+
+public ProductsViewImpl getProductsView () {
+	return productsView;
+}
+
+public ShoppingCartViewImpl getShoppingCartView () {
+	return shoppingCartView;
 }
 
 private ProductsViewImpl productsView;

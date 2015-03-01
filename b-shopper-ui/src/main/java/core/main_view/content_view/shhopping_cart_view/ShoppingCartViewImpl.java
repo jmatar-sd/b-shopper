@@ -3,8 +3,11 @@ package core.main_view.content_view.shhopping_cart_view;
 import com.vaadin.server.FontAwesome;
 import com.vaadin.shared.ui.label.ContentMode;
 import com.vaadin.ui.Button;
+import com.vaadin.ui.FormLayout;
 import com.vaadin.ui.Label;
 import com.vaadin.ui.VerticalLayout;
+import core.main_view.content_view.shhopping_cart_view.summary_view.SummaryView;
+import core.main_view.content_view.shhopping_cart_view.summary_view.SummaryViewImpl;
 
 /**
  * Created by Mohammed Matar
@@ -17,17 +20,18 @@ private static final String
 		VIEW_STYLE_NAME= "shopping-cart-view"
 				;
 {initRoot();initComponents();}
-private void initRoot(){setWidth(VIEW_WIDTH);setHeight(VIEW_HEIGHT);setStyleName(VIEW_STYLE_NAME);}
+private void initRoot(){setWidth(VIEW_WIDTH);/*setHeight(VIEW_HEIGHT);*/setStyleName(VIEW_STYLE_NAME);setMargin(true    );}
 private void initComponents(){
-	initLogo();
+
+	initSummaryView();
 }
 
-private void initLogo(){
-	logo= new Label("<center>"+FontAwesome.SHOPPING_CART.getHtml()+"</center>", ContentMode.HTML);
-	setWidth(VIEW_WIDTH);
-	setHeight("80px");
-	setStyleName("logo");
-	addComponent(logo);
+
+private void initSummaryView(){
+	summaryView= new SummaryViewImpl();
+	summaryView.setWidth(VIEW_WIDTH);
+	addComponent(summaryView);
 }
-private Label logo;
+
+private SummaryViewImpl summaryView;
 }

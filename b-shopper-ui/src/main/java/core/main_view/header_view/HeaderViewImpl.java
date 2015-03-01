@@ -6,6 +6,8 @@ import com.vaadin.ui.HorizontalLayout;
 import com.vaadin.ui.Label;
 import com.vaadin.ui.themes.ValoTheme;
 import core.main_view.header_view.menu_view.MenuViewImpl;
+import core.main_view.header_view.menu_view.MenuViewModel;
+import core.main_view.header_view.menu_view.MenuViewPresenter;
 
 /**
  * Created by Mohammed Matar
@@ -27,6 +29,7 @@ private void initComponents(){
 private void initMenuView(){
 	menuView= new MenuViewImpl();
 	addComponent(menuView);
+	new MenuViewPresenter(new MenuViewModel(), menuView);
 }
 private void initTitle(){
 	title= new Label(TITLE_TEXT);

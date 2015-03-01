@@ -1,0 +1,64 @@
+@import "pattern";
+$shopping-cart-view-bgcolor:  rgba(70%, 48%, 43%, .89);
+$view-opacity: .75;
+$base-fg-color: rgba(247, 136, 169, .89);
+$base-bg-color: rgba(75%, 93%, 84%, .89);
+$radius: 15%;
+$view-border:  8px darken($shopping-cart-view-bgcolor, .4) inset ;
+$view-border-pink:  8px darken($base-fg-color, 2%) inset ;
+@mixin general-config(){
+  html, body{width: 100%; height: 100%;}
+}
+@mixin main-view(){}
+@mixin content-view(){.content-view{}}
+@mixin header-view(){
+  .header-view{
+    background: url('../res/images/bg.jpg') no-repeat rgba(189, 22, 22, .22) 0 0 fixed;
+    @include glass-shadow($base-bg-color);
+    background-size: 100% 100%;
+    border-bottom: $view-border;
+    opacity:    $view-opacity;
+    .v-icon{color: $base-fg-color; font-size: 2em; cursor: pointer;&:hover{@include trans('color', .3s, 'ease-in');color: darken($base-bg-color, 89%);}}
+    .v-button{ outline: none;height: 37px;width: 37px;text-align: center;}
+    .v-label{color: darken($base-fg-color, 22%);font-weight: bolder;}
+  }
+}
+@mixin menu-view(){
+  .menu-view{
+    background-color: rgba(233, 223, 233, .89);
+    @include border-radius-custom($radius, $radius, $radius, $radius);
+    @include glass-shadow($base-fg-color);
+    padding-left: 15px;
+  }
+}
+@mixin products-view(){.products-view{display: inline-block}}
+@mixin shopping-cart-view(){
+  .shopping-cart-view{opacity:    $view-opacity;color: darken($base-fg-color, 22%);}
+}
+@mixin summary-view(){
+  .summary-view{
+    background-color: darken($base-fg-color, 82%);
+    font-size: 100%;
+    @include   border-radius($radius);
+    .logo{@include border-radius($radius);@include glass-shadow($base-bg-color);text-align: center;.v-caption{font-size: 4em;font-weight: 800;}.v-icon{font-size: 4em;}border-bottom: $view-border-pink}
+  }
+}
+@mixin item-view(){
+  .item-view{
+    float: left;
+    background-color: darken($base-fg-color, 22%);
+//    @include glass-shadow($base-fg-color);
+    margin: 15px;
+    @include border-radius-custom(0, 0, $radius,  $radius);
+    .v-button{outline: none;color: lighten($base-fg-color, 89%);.v-icon{font-size: 2em;text-align: center; cursor: pointer}
+    &:hover{@include trans('color', .3s, 'ease-in');color: darken($base-fg-color, 89%);}}
+    .item-title{background-color: lighten($base-bg-color, 22%);padding-top: 5%}
+    .item-picture{background-color: whitesmoke;opacity: .7;}
+    .item-details{padding-top: 5%; }
+    .item-buttons{margin-bottom: 25px;}
+  }
+  .item-label-text{
+    text-align: center;
+    color: darken($base-bg-color, 22%);
+  }
+}
