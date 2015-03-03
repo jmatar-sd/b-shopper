@@ -1,4 +1,5 @@
 @import "views/main-view";
+@import "views/products-manager-view";
 
 @mixin theme-products-manager-view(){
 
@@ -13,4 +14,6 @@
   @include shopping-cart-view;
   @include summary-view;
   @include item-view;
+  /* products manager view */
+  @include settings-pm-menu-view;
 }

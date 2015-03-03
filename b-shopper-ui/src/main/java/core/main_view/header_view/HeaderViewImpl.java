@@ -1,10 +1,8 @@
 package core.main_view.header_view;
 
-import com.vaadin.ui.Alignment;
-import com.vaadin.ui.Button;
-import com.vaadin.ui.HorizontalLayout;
-import com.vaadin.ui.Label;
+import com.vaadin.ui.*;
 import com.vaadin.ui.themes.ValoTheme;
+import core.main_view.MainViewImpl;
 import core.main_view.header_view.menu_view.MenuViewImpl;
 import core.main_view.header_view.menu_view.MenuViewModel;
 import core.main_view.header_view.menu_view.MenuViewPresenter;
@@ -13,15 +11,15 @@ import core.main_view.header_view.menu_view.MenuViewPresenter;
  * Created by Mohammed Matar
  * Creation Date 2/25/15.
  */
-public class HeaderViewImpl extends HorizontalLayout{
+public class HeaderViewImpl extends HorizontalLayout implements HeaderView{
 private static final String
 		VIEW_WIDTH= "100%",
 		VIEW_HEIGHT= "200px",
 		VIEW_STYLE_NAME= "header-view",
 		TITLE_TEXT= "Perfume Store"
 		;
-
 {initRoot();initComponents();}
+
 private void initRoot(){setWidth(VIEW_WIDTH);setHeight(VIEW_HEIGHT);setStyleName(VIEW_STYLE_NAME);setMargin(true);}
 private void initComponents(){
 	initMenuView();initTitle();
@@ -43,4 +41,6 @@ private void initTitle(){
 }
 private MenuViewImpl menuView;
 private Label        title;
+
+
 }

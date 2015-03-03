@@ -1,0 +1,12 @@
+@import "pattern";
+$DEFAULT-FONT-SIZE: 2EM;
+@mixin settings-pm-menu-view(){
+  .settings-pm-menu-view{
+    display: inline-block;
+    background-color: rgba(233, 223, 233, .89);
+//    @include border-radius-custom($radius, $radius, $radius, $radius);
+    @include glass-shadow($base-fg-color);
+    padding-left: 15px;
+    &>.v-button{float: left;outline: none;/* icons */.v-icon{font-size: $DEFAULT-FONT-SIZE;margin: 30px;}}
+  }
+}
