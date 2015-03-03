@@ -1,7 +1,8 @@
 B-Shopper Online Store
 ==============
-this 
-  Online 
+
+    Online Perfume Store is a free & open source application licensed under "MIT"-simply do the ****** thing you want    and   edit the code add new futers as you like. i'm using [VAADIN](http://www.vaadin.com) for front-end taier. 
+  
 
 
 Project Structure
